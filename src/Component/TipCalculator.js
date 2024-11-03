@@ -26,8 +26,8 @@ function TipCalculator() {
       const tipPerPerson = totaltip / noOfPeople;
       const totalAmount = billAmount + totaltip;
       const totalPerPerson = totalAmount / noOfPeople;
-      setTip(tipPerPerson);
-      settotal(totalPerPerson);
+      setTip(tipPerPerson.toFixed(2));
+      settotal(totalPerPerson.toFixed(2));
     } else {
       setAmount("");
       setnumber("");
@@ -137,14 +137,14 @@ function TipCalculator() {
               <h1 className="text-white font-bold text-xl mr-10">Tip Amount</h1>
               <h1 className="text-teal-700">/ person</h1>
             </div>
-            <h1 className="text-4xl font-bold text-teal-700">{tip}$</h1>
+            <h1 className="text-4xl font-bold text-teal-700 overscroll-x-contain w-20">{tip}$</h1>
           </div>
           <div className="flex justify-evenly">
             <div className="">
               <h1 className="text-white text-xl font-bold">Total</h1>
               <h1 className="text-teal-700">/ person</h1>
             </div>
-            <h1 className="text-4xl font-bold text-teal-700 ml-14">{total}$</h1>
+            <h1 className="text-4xl font-bold text-teal-700 ml-14 overscroll-x-contain w-20">{total}$</h1>
           </div>
           <button
             onClick={() => {
